@@ -45,7 +45,7 @@ public class KMP {
         //next数组第2位开始判断，边界就是数据的长度
         for(int i=1;i<nelen;i++){
             //分三种情况：1、如果后一位和前一位的值不相等,就要一直回退
-          while(j>=0&&nearr[i]!=nearr[j]) {
+          while(j>0&&nearr[i]!=nearr[j]) {
               j=next[j-1];
           }
             //2、入伙后一位的值和前一位相等
@@ -63,6 +63,9 @@ public class KMP {
         String haystack="hello";
         String needle="ll";
         System.out.println(strStr(haystack,needle));
+        int[] i= {1,2,3};
+        int a=i.length;
+        System.out.println(a);
 
     }
 }
